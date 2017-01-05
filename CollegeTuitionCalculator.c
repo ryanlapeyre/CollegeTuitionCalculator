@@ -47,8 +47,13 @@ int main (void)
 	scanf("%d" , &inputID);
 	while (checkID(stuInfo , inputID) == -1)
 	{
-	    printf("Invalid student ID. Please type again:");
+	    printf("Invalid student ID. Please type again or enter 0 to quit:");
 	    scanf("%d" , &inputID);
+	    if(inputID == 0)
+	    {
+		return 0;    
+	    }
+	
 	}
 
 	rowID = checkID(stuInfo , inputID);
